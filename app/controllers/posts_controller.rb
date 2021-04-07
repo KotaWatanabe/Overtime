@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :delete]
+  before_action :set_post, only: [:show, :edit, :delete, :update]
   def index 
     @posts = Post.includes(:user).all
   end
@@ -15,6 +15,17 @@ class PostsController < ApplicationController
       redirect_to @post, notice: 'Your post was created successfully'
     else
       render :new
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to @post, notice: 'Your post was created successfully'
+    else 
+      render :edit
     end
   end
 
