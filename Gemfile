@@ -62,3 +62,4 @@ gem 'pundit', '~> 1.1'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'twilio-ruby', '~> 4.11', '>= 4.11.1'
+gem 'dotenv-rails', :groups => [:development, :test]
